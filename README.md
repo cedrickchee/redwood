@@ -191,3 +191,60 @@ for my nascent web app framework. Namely:
   framework. Can a web framework do the same?
 
 And there you have it.
+
+---
+
+#### What the community says
+
+- It was called Hammer initially.
+
+- Summary of Redwood and its benefits by Tom (GitHub cofounder, creator of Jekyll): https://twitter.com/mojombo/status/1237441122097487873
+
+> Gitlab's sytse: "This feels like Rails for the JavaScript age. Moving from:
+>  - REST :arrow_right: GraphQL
+>  - ERb :arrow_right: React
+>  - Active Record :arrow_right: Prisma
+>  - Rspec :arrow_right: Jest
+>  - routes.rb :arrow_right: Routes.js
+>  - Sprockets :arrow_right: Webpack + Babel
+>  - VM :arrow_right: Functions (AWS Lambda, "serverless", etc.)
+>  - Caching :arrow_right: Static site + CDN (edge-ready technologies like Netlify, CloudFlare, etc.)
+
+Tom: Yes! That is precisely correct! Redwood comes out of some of my frustrations of using React on top of Rails and wondering why I don't just have JS and GraphQL all the way down.
+
+> Redwood is opinionated. Today's landscape of modern JS and node provide millions of ways to do everything, but what I want is one awesome way to get things done.
+>
+> Redwood is developer experience. Eliminate boilerplate. Be declarative as much as possible. Embrace VSCode, eslint, and prettier. Let Babel/webpack do the heavy lifting without having to touch config files. Focus on what makes your app special.
+
+I love this already. This unpack to: "convention over configuration", "explicit rather than implicit", decoupling by "composition, not inheritance".
+A little story: my background was in full-stack web development before leaving to be a backend software engineer.
+IMO, most of the JS stacks and frontend development with React and Node.js before 2017 are a mess — unnecessarily complex, bloated, and not fast enough. The tools quality is getting better now, but I think we can do a better job.
+
+Mad respect on the shortcuts commands, the developer experience is well thought from the start with Yarn workspaces (monorepo).
+
+> Redwood is integrated. How much time have you spent integrating various technologies into your React app? Too much, I expect. Redwood does it for you, and we’ll KEEP doing it for you with every new release.
+
+Yup, too much until I have to stop myself and reach out to open source boilerplate/starter kit for some greenfield projects that need to use shiny new technologies like CSS in React, GraphQL instead of boring technologies like SCSS, REST which I leverage our existing homebrew boilerplate and libraries. IMO, playing and integrating various technologies is not for everyone. This is the reason why some devs think JavaScript "fatigue" is real. The part about "KEEP" is important because I've experienced many open source React boilerplates abandon or nearly zero maintenance. Long-term support (LTS) is important to keep the project alive.
+
+> Redwood is available NOW for you to experiment with. Open source and MIT licensed. We have an extensive tutorial (https://redwoodjs.com/tutorial) and several simple example apps showing off various features (see README).
+
+The docs looks great. But, we need more of this :)
+I've seen many on-boarding developer experience (DX) for popular JS libs/frameworks either almost doesn't exist or not good. I am aware this project is still in the alpha phase, but please please also focus on documentations, getting started guides, tutorials, and API reference WITH examples. It doesn't matter how awesome is your frammework if your docs sucks (frictions to adopt and use your work). We should not underrate docs these days. Those who have work with React prior to create-react-app (CRA) CLI release know why on-boarding DX is important.
+
+> How possible it is to decouple at the GraphQL layer? I am sure you've thought about this more than I have but Rails/SQL seems analogous to JS/GraphQL? And while I appreciate strong defaults (e.g. MySQL in Rails) it seems like you'd want ability to use other GraphQL backends e.g. Hasura?
+
+Tom: Yes! We haven't spent much time yet making the integration of other APIs super slick, but it's on the roadmap. JAMstack sites often use several APIs, and I expect the same to be true for Redwood apps. But first, we wanted to ensure it was SUPER slick to build your own API first.
+
+> I believe Prisma2 is still not production ready or is this release of Redwood for testing it around? I used Prisma1 last month for a new project because Prisma2 doesn’t have subscriptions yet.
+
+Peter: We're in testing mode.
+
+> Will you have a TypeScript story?
+
+We are working on full end-to-end TypeScript support for Redwood, all they way from the DB schema definition to the frontend and back via GraphQL. It's in the works.
+
+> Congrats! What is the business model?
+
+Tom: No business model. I just want it to exist!
+
+Peter: Definitely check out our "Cells" concept, how we handle Forms, auto-importing, etc.
